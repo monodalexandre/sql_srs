@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 import io
 
+print("Je printe ça là")
+
 csv = '''
 beverage,price
 orange juice,2.5
@@ -18,6 +20,8 @@ cookie juice,2.5
 chocolatine,2
 muffin,3
 '''
+
+print("Je printe ça là")
 
 food_items = pd.read_csv(io.StringIO(csv2))
 
@@ -61,3 +65,5 @@ sql_query = st.text_area(label="Requête SQL")
 result = duckdb.sql(sql_query)
 st.write(f"Vous avez entré la quéquette : {sql_query}")
 st.dataframe(result)
+
+print("Je printe ça là")
